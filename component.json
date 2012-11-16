@@ -1,0 +1,21 @@
+{
+  "name": "view",
+  "repo": "anthonyshort/view",
+  "description": "Simple view class based on Backbone",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/delegate": "*",
+    "manuelstofer/each": "*",
+    "anthonyshort/extend": "*",
+    "component/dom": "*",
+    "timoxley/backbone-events": "*",
+    "component/bind": "*",
+    "component/object": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}

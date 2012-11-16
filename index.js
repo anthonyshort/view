@@ -45,12 +45,20 @@ View.create = function(proto, stat) {
  *
  *     class MyView extends View
  *       @include DraggableView
+ *
+ * If the mixin includes a method called 'included' this will
+ * be fired and the mixin will be passed the view. You can use
+ * this callback to create initialization code for the view
+ * within the mixin itself
  * 
  * @param  {Object} obj Object to mixin
  * @return {void}
  */
 View.include = function(obj) {
   extend(View.prototype, obj);
+  if(typeof obj.included === 'function') {
+    obj.included(View);
+  }
 };
 
 /**

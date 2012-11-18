@@ -228,7 +228,7 @@ View.protoype.remove = function() {
 View.prototype.removeView = function(view) {
   each(this.views, function(subview, key){
     if( subview === view || !view ) {
-      view.dispose();
+      subview.dispose();
       delete this.views[key];
     }
   });

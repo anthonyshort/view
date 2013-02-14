@@ -123,7 +123,7 @@ View.prototype.reset = function(element) {
 View.prototype.delegate = function(events) {
   var self = this;
   each(events, function(name, method) {
-    self.on(name, method);
+    self.bind(name, method);
   });
   return this;
 };

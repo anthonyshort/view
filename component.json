@@ -1,21 +1,15 @@
 {
   "name": "view",
   "repo": "anthonyshort/view",
-  "description": "Simple view class based on Backbone",
-  "version": "0.0.1",
-  "keywords": [],
+  "description": "Tiny ~5kb view class based on Backbone that doesn't require a jQuery.",
+  "version": "0.1.0",
   "dependencies": {
     "component/delegate": "*",
-    "manuelstofer/each": "*",
-    "anthonyshort/extend": "*",
-    "component/dom": "*",
-    "timoxley/backbone-events": "*",
-    "component/bind": "*",
-    "component/object": "*"
+    "component/event": "*"
   },
-  "development": {},
+  "development": {
+    "component/assert": "*"
+  },
   "license": "MIT",
-  "scripts": [
-    "index.js"
-  ]
+  "scripts": [ "index.js", "lib/view.js" ]
 }

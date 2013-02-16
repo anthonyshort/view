@@ -14,4 +14,4 @@ clean:
 test: build
 	@open test/tests.html
 
-.PHONY: clean test
+.PHONY: clean test components

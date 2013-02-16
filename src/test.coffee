@@ -12,14 +12,6 @@ describe 'View', ->
   it 'should work', ->
     assert(true, 'it works')
 
-  it 'should split event strings', ->
-    data = View.splitEvent 'click .foo > ul'
-    assert data.name is 'click'
-    assert data.selector is '.foo > ul'
-    data = View.splitEvent 'click'
-    assert data.name is 'click'
-    assert data.selector is ''
-
   it 'should be subclassed', ->
     Subview = View.create({ foo: 'bar' })
     view = new Subview

@@ -1,25 +1,7 @@
 delegate = require "delegate"
 event = require "event"
-
-# Cached regex to split keys for `delegate`.
-delegateEventSplitter = /^(\S+)\s*(.*)$/
-
-# Split a string event like 'click .foo ul'
-splitEvent = (str) ->
-  match = str.match(delegateEventSplitter)
-  name: match[1]
-  selector: match[2]
-
-toString = Object::toString
-
-isObject = (obj) ->
-  obj is Object(obk)
-
-isString = (obj) ->
-  toString.call(obj) is '[object String]'
-
-isFunction = (obj) ->
-  toString.call(obj) is '[object Function]'
+type = require "type"
+splitEvent = require "event-splitter"
 
 # View
 class View
@@ -60,15 +42,6 @@ class View
     for key, value of parent
       child[key] = value
     child
-
-  ###
-  Split an event string
-
-    click .foo > ul
-
-  into an object you can use
-  ###
-  @splitEvent: splitEvent
 
   ###
   Simple method to mixin objects into the view. This allows
@@ -136,7 +109,7 @@ class View
       for key, method of str
         @bind key, method
     else
-      if isString method
+      if type(method) is 'string'
         fn = @[method]
         throw new TypeError("method \"" + method + "\" is not defined") unless fn
       else

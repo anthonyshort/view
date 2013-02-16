@@ -5,11 +5,17 @@
   "version": "0.1.0",
   "dependencies": {
     "component/delegate": "*",
-    "component/event": "*"
+    "component/event": "*",
+    "component/type": "*",
+    "anthonyshort/event-splitter": "*",
+    "component/type": "*"
   },
   "development": {
     "component/assert": "*"
   },
   "license": "MIT",
-  "scripts": [ "index.js", "lib/view.js" ]
+  "scripts": [
+    "index.js",
+    "lib/view.js"
+  ]
 }

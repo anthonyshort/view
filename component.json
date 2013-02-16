@@ -6,7 +6,6 @@
   "dependencies": {
     "component/delegate": "*",
     "component/event": "*",
-    "component/type": "*",
     "anthonyshort/event-splitter": "*",
     "component/type": "*"
   },
